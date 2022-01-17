@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="FreshMvvm" Version="4.0.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="System.Text.Json" Version="6.0.1" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="FreshMvvm" />
+    <None Remove="Pages\" />
+    <None Remove="Services\" />
+    <None Remove="PageModels\" />
+    <None Remove="Navigation\" />
+    <None Remove="Models\" />
+    <None Remove="sqlite-net-pcl" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="System.Text.Json" />
+    <None Remove="Constants\" />
+    <None Remove="Com.Airbnb.Xamarin.Forms.Lottie" />
+    <None Remove="Styles\" />
+    <None Remove="Resources\" />
+    <None Remove="Resources\Fonts\" />
+    <None Remove="Resources\Fonts\FontAwesome-Regular.ttf" />
+    <None Remove="Resources\Fonts\FontAwesome-Solid.ttf" />
+    <None Remove="Resources\Fonts\Mulish-Black.ttf" />
+    <None Remove="Resources\Fonts\Mulish-Bold.ttf" />
+    <None Remove="Resources\Fonts\Mulish-ExtraBold.ttf" />
+    <None Remove="Resources\Fonts\Mulish-ExtraLight.ttf" />
+    <None Remove="Resources\Fonts\Mulish-Light.ttf" />
+    <None Remove="Resources\Fonts\Mulish-Medium.ttf" />
+    <None Remove="Resources\Fonts\Mulish-Regular.ttf" />
+    <None Remove="Resources\Fonts\Mulish-SemiBold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Services\" />
+    <Folder Include="PageModels\" />
+    <Folder Include="Navigation\" />
+    <Folder Include="Models\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Styles\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\FontAwesome-Regular.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\FontAwesome-Solid.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Mulish-Black.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Mulish-Bold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Mulish-ExtraBold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Mulish-ExtraLight.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Mulish-Light.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Mulish-Medium.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Mulish-Regular.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Mulish-SemiBold.ttf" />
+  </ItemGroup>
+</Project>

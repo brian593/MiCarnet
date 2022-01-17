@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    Title="Mi Carnet"
+    x:Class="MiCarnet.Pages.ConsultaPage">
+    <ContentPage.Content>
+        <Grid
+            BackgroundColor="{AppThemeBinding Light={StaticResource LightPageBackgroundColor}, Dark={StaticResource DarkPageBackgroundColor}}"
+            RowDefinitions="*, Auto,Auto,Auto">
+
+            <forms:AnimationView
+                Grid.Row="0"
+                x:Name="animationView"
+                AutoPlay="True"
+                Animation="Search.json"
+                AnimationSource="AssetOrBundle"
+                RepeatMode="Infinite"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Margin="20, 0, 0, 0"
+                 />
+
+            <StackLayout Grid.Row="1">
+                <Label Text="Fecha de Nacimiento">
+
+                </Label>
+                <DatePicker>
+
+            </DatePicker>
+
+            </StackLayout>
+
+              <StackLayout Grid.Row="2">
+                <Label Text="Identificacion">
+
+                </Label>
+                <Entry>
+                    
+                </Entry>
+
+            </StackLayout>
+            
+
+             <Button
+                BackgroundColor="{AppThemeBinding Light={StaticResource LightButtonColor}, Dark={StaticResource DarkButtonColor}}"
+                Command="{Binding GetStartedCommand}"
+                Grid.Row="3"
+                Margin="20, 20, 20, 20"
+                Text="Consultar"
+                VerticalOptions="End"
+                Style="{StaticResource Base_Button}"></Button>            
+             </Grid>
+    </ContentPage.Content>
+</ContentPage>

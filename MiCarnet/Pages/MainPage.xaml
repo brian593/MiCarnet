@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Mi Carnet"
+             x:Class="MiCarnet.Pages.MainPage">
+
+    <ContentPage.Content>
+
+         <Grid
+            BackgroundColor="{AppThemeBinding Light={StaticResource LightPageBackgroundColor}, Dark={StaticResource DarkPageBackgroundColor}}"
+            RowDefinitions="*, Auto">
+             <Button
+                BackgroundColor="{AppThemeBinding Light={StaticResource LightButtonColor}, Dark={StaticResource DarkButtonColor}}"
+                Command="{Binding GetCosultaCommand}"
+                Grid.Row="1"
+                Margin="20, 0, 0, 0"
+                Text="Descargar certificados"
+                VerticalOptions="Start"
+                Style="{StaticResource Base_Button}"></Button>
+        
+
+
+             <StackLayout Grid.Row="2">
+                  <CollectionView ItemsSource="{Binding Mytasks}"
+                            SelectionMode="Single"
+                            EmptyView="No hay certificados de vacunas descargados"
+                            Margin="5">
+                  </CollectionView>
+             </StackLayout>
+             </Grid>
+
+        
+
+        </ContentPage.Content>
+
+</ContentPage>
